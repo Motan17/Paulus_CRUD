@@ -1,100 +1,67 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>TAMBAH DATA</title>
-  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
-
+    <title>TAMBAH DATA</title>
 </head>
-<body>
-<!-- partial:index.partial.html -->
-<div class="row">
-  <section class="section">
-    <header>
-      <h3>TAMBAH DATA</h3>
-      <h4>Isi kolom dibawah untuk tambah data</h4>
-    </header>
-    <main>
-      <form>
-        <div class="form-item box-item">
-          <input type="text" name="name" placeholder="Name" data-required>
-          <small class="errorReq"><i class="fa fa-asterisk" aria-hidden="true"></i> required field</small>
-        </div>
-		
-		<div class="form-item box-item">
-          <input type="text" name="Alamat" placeholder="Alamat" data-required>
-          <small class="errorReq"><i class="fa fa-asterisk" aria-hidden="true"></i> required field</small>
-        </div>
-		
-       <!-- <div class="form-item box-item">
-          <input type="email" name="email" placeholder="Email" data-email data-required>
-          <small class="errorReq"><i class="fa fa-asterisk" aria-hidden="true"></i> required field</small>
-          <small class="errorEmail"><i class="fa fa-asterisk" aria-hidden="true"></i> email is not valid</small>
-        </div>-->
-        <div class="form-item box-item">
-          <div class="form-item-triple">
-            <div class="radio-label"> 
-              <label class="label">Jenis Kelamin</label>
-            </div>
-            <div class="form-item"> 
-              <input id="Male" type="radio" name="gender" value="Male" data-once>
-              <label for="Male">Laki-laki</label>
-            </div>
-            <div class="form-item"> 
-              <input id="Female" type="radio" name="gender" value="Female" data-once>
-              <label for="Female">Perempuan</label>
-            </div>
-          </div>
-          <small class="errorOnce"><i class="fa fa-asterisk" aria-hidden="true"></i> choose at least one</small>
-        </div>
-        <div class="form-item box-item">
-          <div class="form-item-triple">
-            <div class="radio-label"> 
-              <!--<label class="label">Type</label>
-            </div>
-            <div class="form-item"> 
-              <input id="sponsored" type="radio" name="gender2" value="sponsored" data-once>
-              <label for="sponsored">sponsored</label>
-            </div>
-            <div class="form-item"> 
-              <input id="paid" type="radio" name="gender2" value="paid" data-once>
-              <label for="paid">paid</label>
-            </div>
-          </div>
-          <small class="errorOnce"><i class="fa fa-asterisk" aria-hidden="true"></i> choose at least one</small>
-        </div>-->
-        
-        <div class="form-item-double box-item">
-          <div class="form-item ">
-            <input type="text" name="Nilai" placeholder="Nilai" data-required data-number>
-            <small class="errorReq"><i class="fa fa-asterisk" aria-hidden="true"></i> required field</small>
-            <small class="errorNum"><i class="fa fa-asterisk" aria-hidden="true"></i> must be a number</small>
-          </div>
-          <div class="form-item">
-            <input type="text" name="Kelas" placeholder="Kelas" data-required data-number>
-            <small class="errorReq"><i class="fa fa-asterisk" aria-hidden="true"></i> required field</small>
-            <small class="errorNum"><i class="fa fa-asterisk" aria-hidden="true"></i> must be a number</small>
-          </div>
-        </div>
-        <!--<div class="form-item box-item">
-          <input type="text" name="phone" placeholder="Phone" data-required data-number data-count="10">
-          <small class="errorReq"><i class="fa fa-asterisk" aria-hidden="true"></i> required field</small>
-          <small class="errorNum"><i class="fa fa-asterisk" aria-hidden="true"></i> must be a number</small>
-          <small class="errorChar"><i class="fa fa-asterisk" aria-hidden="true"></i> must be 10 digits</small>
-        </div>-->
-        <div class="form-item">
-          <!--<span id="submit" class="submit">Submit</span>-->
-        </div>
-      </form>
-    </main>
-    <footer>
-    <p> <a >  <input type="submit" value="Daftar" name="daftar" /></a></p>
-    </footer>
-    <i class="wave"></i>
-  </section>
-</div>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script  src="./script.js"></script>
+<style>
+body{
+            background-image:url(bg4.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100%;
+        }</style>
 
-</body>
+<body>
+    <header>
+        <h3 align="center">TAMBAH DATA BARU</h3>
+    </header>
+
+    <form action="proses-pendaftaran.php" method="POST">
+
+       <center> 
+
+        <p>
+            <label for="nama">Nama: </label>
+            <input type="text" name="nama" placeholder="nama lengkap" />
+        </p>
+        <p>
+            <label for="alamat">Alamat: </label>
+            <textarea name="alamat"></textarea>
+        </p>
+        <p>
+            <label for="jenis_kelamin">Jenis Kelamin: </label>
+            <label><input type="radio" name="jenis_kelamin" value="laki-laki"> Laki-laki</label>
+            <label><input type="radio" name="jenis_kelamin" value="perempuan"> Perempuan</label>
+        </p>
+        <p>
+		
+            <label for="nilai">Nilai: </label>
+           <input type="number_format" name="nilai" placeholder="nilai" />
+            <!--<label for="agama">Agama: </label>
+            <select name="agama">
+                <option>Islam</option>
+                <option>Kristen</option>
+                <option>Hindu</option>
+                <option>Budha</option>
+                <option>Atheis</option>
+            </select>
+        </p>-->
+        <p>
+            <label for="kelas">Kelas: </label>
+            <input type="text" name="kelas" placeholder="kelas" />
+        </p>
+        <p>
+            <input type="submit" value="Daftar" name="daftar" />
+			
+        </p>
+
+        <!--</fieldset>-->
+		<br>
+ <button ><a href="index.php">HOME</a></button>		</center>
+
+    </form>
+
+    </body>
 </html>

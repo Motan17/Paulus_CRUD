@@ -69,8 +69,8 @@
                            <div class="container-fluid">
                               <div class="carousel-caption relative">
                                  <div class="bluid">
-                                    <h1 style="color:#F0B51E ">SELAMAT DATANG <br>DI Aplikasi CRUD SISWA </h1>
-                                    <p style="color:#F0B51E ">Anda dapat melihat, menghapus,mengedit, serta mencetak data siswa <br>by. Paulus Zalukhu
+                                    <h1>SELAMAT DATANG <br>Di Aplikasi CRUD SISWA </h1>
+                                    <p>Anda dapat melihat, menghapus,mengedit, serta mencetak data siswa <br>by. Paulus Zalukhu
                                     </p>
 									
 									<nav>
